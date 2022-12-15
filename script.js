@@ -31,42 +31,42 @@ function playRound(player, comp) {
     if (playerChoice === "rock") {
         switch (computerChoice) {
             case "rock":
-                console.log("Nobody wins");
+                return "Nobody wins";
                 break;
             case "paper":
-                console.log("You loose: Paper beats rocks");
+                return "You loose: Paper beats rocks";
                 break;
             case "scissors":
-                console.log("You win, rock beats scissors")
+                return "You win, rock beats scissors";
                 break;
         }
     } else if (playerChoice === "paper") {
         switch (computerChoice) {
             case "rock":
-                console.log("You win, paper beats rock");
+                return "You win, paper beats rock";
                 break;
             case "paper":
-                console.log("Nobody wins");
+                return "Nobody wins";
                 break;
             case "scissors":
-                console.log("You loose, scissors beat paper")
+                return "You loose, scissors beat paper";
                 break;
         }
     } else if (playerChoice === "scissors") {
         switch (computerChoice) {
             case "rock":
-                console.log("You lose, rock beats paper");
+                return "You lose, rock beats paper";
                 break;
             case "paper":
-                console.log("You win, scissors beat paper");
+                return "You win, scissors beat paper";
                 break;
             case "scisscors":
-                console.log("Nobody wins");
+                return "Nobody wins";
                 break;
         }
     }
     else {
-        console.log("Something's wrong");
+        return "Something's wrong";
     }
 }
 
