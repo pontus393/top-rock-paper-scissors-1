@@ -77,8 +77,16 @@ function playRound(player, comp) {
 
 function game() {
     for (let i = 0; i < 5; i++) {
-        let result = playRound("Paper", getComputerChoice());
+
+        let comp = getComputerChoice()
+        let player = "Paper";
+
+        let result = playRound(player, comp);
+        
+        
         console.log(result);
+        console.log("Comp: " + comp);
+        console.log("Player: " + player);
      }
 }
 
