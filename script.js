@@ -1,5 +1,6 @@
 
 
+// FUNCTION TO GENERATE COMPUTER CHOICE
 function getComputerChoice() {
 
     // Create intVar containing a random value between 0 - 2
@@ -22,6 +23,3 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice())
-
-// Create if statements evaluating value and returning "Rock", "Paper" or "Scissors" depending on the value
-// Create stringVar containing the result
