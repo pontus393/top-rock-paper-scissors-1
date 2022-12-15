@@ -28,51 +28,67 @@ function playRound(player, comp) {
     let playerChoice = player.toLowerCase();
     let computerChoice = comp;
 
+    let playerWins = 0;
+
     if (playerChoice === "rock") {
         switch (computerChoice) {
             case "rock":
-                return "Nobody wins";
+                playerWins = null;
                 break;
             case "paper":
-                return "You loose: Paper beats rocks";
+                playerWins = 0;
                 break;
             case "scissors":
-                return "You win, rock beats scissors";
+                playerWins = 1;
                 break;
         }
     } else if (playerChoice === "paper") {
         switch (computerChoice) {
             case "rock":
-                return "You win, paper beats rock";
+                playerWins = 1;
                 break;
             case "paper":
-                return "Nobody wins";
+                playerWins = null;
                 break;
             case "scissors":
-                return "You loose, scissors beat paper";
+                playerWins = 0;
                 break;
         }
     } else if (playerChoice === "scissors") {
         switch (computerChoice) {
             case "rock":
-                return "You lose, rock beats paper";
+                playerWins = 0;
                 break;
             case "paper":
-                return "You win, scissors beat paper";
+                playerWins = 1;
                 break;
             case "scisscors":
-                return "Nobody wins";
+                playerWins = null;
                 break;
         }
     }
     else {
         return "Something's wrong";
     }
+
+    return playerWins;
 }
 
-console.log(playRound("Paper", getComputerChoice()));
 
-// Create stringVar containing player choice (to be updated with input at later stage)
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let result = playRound("Paper", getComputerChoice());
+        console.log(result);
+     }
+}
 
-// Create switch statements for all possible combinations
+game()
+
+// Create loop that loops five times
+// Within each loop, call playRound
+// Within each loop, save the score
+// Within each loop, console.log(SCORE)
+
+
+
 
