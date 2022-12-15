@@ -10,11 +10,11 @@ function getComputerChoice() {
     let computerChoice = "";
 
     if (randInt === 0) {
-        computerChoice = "rock";
+        computerChoice = "Rock";
     } else if (randInt === 1) {
-        computerChoice = "paper";
+        computerChoice = "Paper";
     } else if (randInt === 2) {
-        computerChoice = "scissors"
+        computerChoice = "Scissors"
     } else {
         console.log("Somethings wrong");
     }
@@ -26,7 +26,7 @@ function getComputerChoice() {
 function playRound(player, comp) {
 
     let playerChoice = player.toLowerCase();
-    let computerChoice = comp;
+    let computerChoice = comp.toLowerCase();
 
     let playerWins = 0;
 
@@ -100,6 +100,7 @@ function game() {
         }
      }
 
+     // Game over - present the winner
      if (playerScore > compScore) {
         console.log(`Congratulations! You beat the computer with ${playerScore} - ${compScore}`);
      } else if (playerScore < compScore) {
