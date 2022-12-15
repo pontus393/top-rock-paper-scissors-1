@@ -52,6 +52,21 @@ function playRound(player, comp) {
                 console.log("You loose, scissors beat paper")
                 break;
         }
+    } else if (playerChoice === "Scissors") {
+        switch (computerChoice) {
+            case "Rock":
+                console.log("You lose, rock beats paper");
+                break;
+            case "Paper":
+                console.log("You win, scissors beat paper");
+                break;
+            case "Scisscors":
+                console.log("Nobody wins");
+                break;
+        }
+    }
+    else {
+        console.log("Something's wrong");
     }
 }
 
