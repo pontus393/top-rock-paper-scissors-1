@@ -10,11 +10,11 @@ function getComputerChoice() {
     let computerChoice = "";
 
     if (randInt === 0) {
-        computerChoice = "Rock";
+        computerChoice = "rock";
     } else if (randInt === 1) {
-        computerChoice = "Paper";
+        computerChoice = "paper";
     } else if (randInt === 2) {
-        computerChoice = "Scissors"
+        computerChoice = "scissors"
     } else {
         console.log("Somethings wrong");
     }
@@ -25,42 +25,42 @@ function getComputerChoice() {
 // FUNCTION FOR GAME ROUND WITH PLAYER AND COMPUTER CHOICE
 function playRound(player, comp) {
 
-    let playerChoice = player;
+    let playerChoice = player.toLowerCase();
     let computerChoice = comp;
 
-    if (playerChoice === "Rock") {
+    if (playerChoice === "rock") {
         switch (computerChoice) {
-            case "Rock":
+            case "rock":
                 console.log("Nobody wins");
                 break;
-            case "Paper":
+            case "paper":
                 console.log("You loose: Paper beats rocks");
                 break;
-            case "Scissors":
+            case "scissors":
                 console.log("You win, rock beats scissors")
                 break;
         }
-    } else if (playerChoice === "Paper") {
+    } else if (playerChoice === "paper") {
         switch (computerChoice) {
-            case "Rock":
+            case "rock":
                 console.log("You win, paper beats rock");
                 break;
-            case "Paper":
+            case "paper":
                 console.log("Nobody wins");
                 break;
-            case "Scissors":
+            case "scissors":
                 console.log("You loose, scissors beat paper")
                 break;
         }
-    } else if (playerChoice === "Scissors") {
+    } else if (playerChoice === "scissors") {
         switch (computerChoice) {
-            case "Rock":
+            case "rock":
                 console.log("You lose, rock beats paper");
                 break;
-            case "Paper":
+            case "paper":
                 console.log("You win, scissors beat paper");
                 break;
-            case "Scisscors":
+            case "scisscors":
                 console.log("Nobody wins");
                 break;
         }
