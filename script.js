@@ -74,20 +74,32 @@ function playRound(player, comp) {
     return playerWins;
 }
 
-
 function game() {
+
+    playerScore = 0;
+    compScore = 0;
+
     for (let i = 0; i < 5; i++) {
 
+        // Choices
         let comp = getComputerChoice()
         let player = "Paper";
 
+        // Play round
         let result = playRound(player, comp);
         
-        
-        console.log(result);
-        console.log("Comp: " + comp);
-        console.log("Player: " + player);
+        // Add score
+        if (result === 1) {
+            playerScore += 1;
+        } else if (result === 0) {
+            compScore += 1;
+        } else {
+            break;
+        }
      }
+
+     console.log(`Player's score is: ${playerScore}`);
+     console.log(`Computer's score is: ${compScore}`);
 }
 
 game()
