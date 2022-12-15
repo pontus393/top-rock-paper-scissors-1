@@ -96,7 +96,7 @@ function game() {
             compScore += 1;
             console.log(`You loose! ${compSelection} beats ${playerSelection}`);
         } else {
-            break;
+            console.log(`Nobody wins, both chose ${compSelection}`)
         }
      }
 
@@ -106,7 +106,7 @@ function game() {
      } else if (playerScore < compScore) {
         console.log(`Too bad! You lost against the computer with ${playerScore} - ${compScore}`);
      } else {
-        console.log(`It's a tie! Wait, is that even possible? Score is ${playerScore} - ${compScore}`)
+        console.log(`It's a tie! Score is ${playerScore} - ${compScore}`)
      }
 
 }
