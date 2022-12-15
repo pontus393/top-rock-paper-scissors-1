@@ -1,5 +1,3 @@
-
-
 // FUNCTION TO GENERATE COMPUTER CHOICE
 function getComputerChoice() {
 
@@ -22,14 +20,17 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-// FUNCTION FOR GAME ROUND WITH PLAYER AND COMPUTER CHOICE
+// FUNCTION FOR GAME ROUND USING PLAYER'S AND COMPUTER'S CHOICES
 function playRound(player, comp) {
 
+    // Get choices and convert to lowercase
     let playerChoice = player.toLowerCase();
     let computerChoice = comp.toLowerCase();
 
+    // Initialize intVar for winner (Player win = 1; Computer win = 0; Tie = null;)
     let playerWins = 0;
 
+    // Evaluate winner based on playerChoice
     if (playerChoice === "rock") {
         switch (computerChoice) {
             case "rock":
@@ -76,19 +77,21 @@ function playRound(player, comp) {
 
 function game() {
 
+    // Initiate intVars for player and computer scores
     playerScore = 0;
     compScore = 0;
 
+    // Loop five rounds
     for (let i = 0; i < 5; i++) {
 
-        // Choices
+        // Get choices
         let compSelection = getComputerChoice()
-        let playerSelection = "Paper";
+        let playerSelection = prompt("Please enter Paper, Rock or Scissors")
 
-        // Play round
+        // Start round
         let result = playRound(playerSelection, compSelection);
         
-        // Add score
+        // Add score and send round message
         if (result === 1) {
             playerScore += 1;
             console.log(`You win! ${playerSelection} beats ${compSelection}`);
@@ -100,7 +103,7 @@ function game() {
         }
      }
 
-     // Game over - present the winner
+     // Game over - present the game winner
      if (playerScore > compScore) {
         console.log(`Congratulations! You beat the computer with ${playerScore} - ${compScore}`);
      } else if (playerScore < compScore) {
