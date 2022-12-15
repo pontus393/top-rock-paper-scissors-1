@@ -28,10 +28,22 @@ function playRound(player, comp) {
     let playerChoice = player;
     let computerChoice = comp;
 
-    return player + " " + comp;
+    if (playerChoice === "Rock") {
+        switch (computerChoice) {
+            case "Rock":
+                console.log("Nobody wins");
+                break;
+            case "Paper":
+                console.log("You loose: Paper beats rocks");
+                break;
+            case "Scissors":
+                console.log("You win, rock beats scissors")
+                break;
+        }
+    }
 }
 
-console.log(playRound("Paper", getComputerChoice()));
+console.log(playRound("Rock", getComputerChoice()));
 
 // Create stringVar containing player choice (to be updated with input at later stage)
 
