@@ -99,16 +99,19 @@ function game() {
             break;
         }
      }
-     console.log(`Player's score is: ${playerScore}`);
-     console.log(`Computer's score is: ${compScore}`);
+
+     if (playerScore > compScore) {
+        console.log(`Congratulations! You beat the computer with ${playerScore} - ${compScore}`);
+     } else if (playerScore < compScore) {
+        console.log(`Too bad! You lost against the computer with ${playerScore} - ${compScore}`);
+     } else {
+        console.log(`It's a tie! Wait, is that even possible? Score is ${playerScore} - ${compScore}`)
+     }
+
 }
 
 game()
 
-// Create loop that loops five times
-// Within each loop, call playRound
-// Within each loop, save the score
-// Within each loop, console.log(SCORE)
 
 
 
