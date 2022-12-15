@@ -82,22 +82,23 @@ function game() {
     for (let i = 0; i < 5; i++) {
 
         // Choices
-        let comp = getComputerChoice()
-        let player = "Paper";
+        let compSelection = getComputerChoice()
+        let playerSelection = "Paper";
 
         // Play round
-        let result = playRound(player, comp);
+        let result = playRound(playerSelection, compSelection);
         
         // Add score
         if (result === 1) {
             playerScore += 1;
+            console.log(`You win! ${playerSelection} beats ${compSelection}`);
         } else if (result === 0) {
             compScore += 1;
+            console.log(`You loose! ${compSelection} beats ${playerSelection}`);
         } else {
             break;
         }
      }
-
      console.log(`Player's score is: ${playerScore}`);
      console.log(`Computer's score is: ${compScore}`);
 }
